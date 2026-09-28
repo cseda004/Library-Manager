@@ -1,6 +1,6 @@
 # Library-Manager
 Simple GTK4 Library Manager app for Linux written entirely by AI
-It currently only works on Linux and Windows but getting it run on macOS absolutely is possible. 
+It currently only works on Linux and Windows but getting it to run on macOS is absolutely possible. 
 
 ## Screenshots
 
