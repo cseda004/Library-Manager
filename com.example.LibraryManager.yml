@@ -1,0 +1,27 @@
+app-id: com.example.LibraryManager
+runtime: org.gnome.Platform
+runtime-version: '49'
+sdk: org.gnome.Sdk
+command: library_manager_app_gtk4.py
+
+finish-args:
+  - --socket=fallback-x11
+  - --socket=wayland
+  - --device=dri
+  - --filesystem=home
+
+modules:
+  - name: library-manager
+    buildsystem: simple
+    build-commands:
+      - install -D library_manager_app_gtk4.py /app/bin/library_manager_app_gtk4.py
+      - chmod +x /app/bin/library_manager_app_gtk4.py
+      - install -D com.example.LibraryManager.desktop /app/share/applications/com.example.LibraryManager.desktop
+      - install -D com.example.LibraryManager.svg /app/share/icons/hicolor/scalable/apps/com.example.LibraryManager.svg
+    sources:
+      - type: file
+        path: library_manager_app_gtk4.py
+      - type: file
+        path: com.example.LibraryManager.desktop
+      - type: file
+        path: com.example.LibraryManager.svg

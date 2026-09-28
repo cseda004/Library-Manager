@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Library Manager
+Comment=Manage your book database
+Exec=/app/bin/library_manager_app_gtk4.py
+Icon=com.example.LibraryManager
+Terminal=false
+Type=Application
+Categories=Office;Database;Utility;
+StartupWMClass=com.example.LibraryManager
